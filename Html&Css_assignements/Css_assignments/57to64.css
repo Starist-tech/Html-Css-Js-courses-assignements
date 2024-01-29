@@ -1,0 +1,266 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: capitalize;
+}
+
+.grid {
+  background-color: #ddd;
+  padding: 20px;
+  width: 800px;
+  height: 400px;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 8fr;
+  gap: 20px 20px;
+  position: relative;
+}
+
+.grid div {
+  display: grid;
+  background-color: #607D8B;
+  display: flex;
+  counter-increment: counter-1;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid div::before {
+  content: "Element  ";
+  color: white;
+  font-weight: bold;
+
+
+}
+
+.grid div::after {
+  content: counter(counter-1);
+  color: white;
+  font-weight: bold;
+  padding-left: 5px;
+}
+
+/* ------------------2--------------------- */
+
+.layout {
+  width: 100vw;
+  height: 100vh;
+  margin: 20px;
+  display: grid;
+  background-color: rgb(165, 171, 176);
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(3, 10% 80% 10%);
+  grid-template-areas: "header header header header header header header header header header "
+    "sec sec sec sec sec sec sec side side side"
+    "foot foot foot foot foot foot foot foot foot foot ";
+  position: relative;
+}
+
+.layout>header {
+  grid-area: header;
+  background-color: #03A9F4;
+}
+
+.layout>section {
+  grid-area: sec;
+  background-color: #FF5722;
+}
+
+.layout>aside {
+  grid-area: side;
+  background-color: #607D8B;
+}
+
+.layout>footer {
+  grid-area: foot;
+  background-color: #009688;
+}
+
+.layout header::after {
+  content: "header";
+  color: white;
+  position: absolute;
+  padding: 10px;
+}
+
+.layout section::after {
+  content: "section";
+  color: white;
+  position: absolute;
+  padding: 10px;
+}
+
+.layout aside::after {
+  content: "aside";
+  color: white;
+  position: absolute;
+  padding: 10px;
+}
+
+.layout footer::after {
+  content: "footer";
+  color: white;
+  position: absolute;
+  padding: 10px;
+}
+
+/* ---------------3-------------- */
+
+.grid-2 {
+  background-color: #ddd;
+  padding: 20px;
+  width: 800px;
+  height: 400px;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: auto 2fr 2fr auto;
+  grid-template-rows: 1fr auto ;
+  gap: 20px;
+  text-align: center;
+  
+}
+
+.grid-2 div {
+  background-color: #403F3F;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* ---------------4--------------- */
+
+.grid-3 {
+  background-color: #ddd;
+  padding: 20px;
+  width: 800px;
+  height: 400px;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows:  repeat(auto-fill , 1fr);
+  gap: 20px;
+  text-align: center;
+}
+
+.grid-3 div {
+  background-color: #228FF5;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.grid-3.one {
+  order: -1;
+  grid-column: 1 / span 3;
+}
+.grid-3.two {
+  grid-column: 1 / span 2;
+  order: -7;
+}
+.grid-3.three {
+  order: -6;
+}
+.grid-3.four {
+  order: -5;
+}
+.grid-3.five {
+  grid-column: 2 / span 2;
+  grid-row: 3 / span 3;
+  order: -4;
+}
+.grid-3.six {
+ order: -3;
+}
+.grid-3.seven {
+  order: -2;
+}
+.grid-3.eight {
+  grid-column: 1 / span 3;
+  order: -8;
+}
+/* -----------------5------------------ */
+
+.grid-4 {
+  background-color: #ddd;
+  display: grid;
+  padding: 20px;
+  width: 800px;
+  height: 400px;
+  margin: 20px auto;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 7.5% 7.5%;
+  gap: 85% 20px ;
+  
+}
+.grid-4 div {
+  background-color: #E91E63;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+}
+
+/* ------------------6---------------------- */
+
+.app {
+  margin: 20px auto;
+  display: grid;
+  background-color: #eee;
+ grid-template-columns: minmax(100px , 1fr) minmax(100px , 1fr) minmax(100px , 1fr) minmax(100px , 1fr);
+ grid-template-rows: minmax(300px , 1fr)  minmax(300px , 1fr)  minmax(300px , 1fr)  minmax(300px , 1fr)  minmax(300px , 1fr)  minmax(300px , 1fr)  minmax(300px , 1fr)  ;
+ gap: 20px;
+ padding: 20px;;
+ 
+}
+.app div {
+  background-color: white;
+  padding: 0 10px;
+  border-bottom: orangered solid 3px;
+  display: grid;
+ font-size: xx-large;
+ position: relative;
+}
+p.par {
+  font-weight: bold;
+} 
+p.desc {
+  color: rgb(122, 122, 122);
+  position: absolute;
+  top: 50px;
+  left: 10px;
+}
+.app .box-3 ,.app .box-5 ,.app .box-8 {
+  background-color: black;
+  color: white;
+}
+.app .box-1 {  
+ order: -10;
+ grid-column: 1 / 3;
+}
+.box-2{
+ order: -9;
+}
+.box-3 {
+order: -8;
+grid-row: 1 / span 3;
+ grid-column: 4;
+}
+.box-4 {
+  order: -7;
+  grid-column: 1;
+  grid-row: 2 / span 2;
+}
+.box-5 {
+  order: -6;
+  grid-column: 2 / 4;
+  grid-row: 2 / 3;
+}
+.box-6 {
+  order: -5;
+  grid-column: 2 / 4;
+  grid-row: 3 / 4;
+}

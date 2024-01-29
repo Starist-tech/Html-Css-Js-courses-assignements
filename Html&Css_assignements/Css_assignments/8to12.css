@@ -1,0 +1,22 @@
+div {
+    background-color: rgb(232, 232, 232);
+    margin: 30px;
+    padding: 10px;
+    padding-left: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.first {
+    border-left: 5px #009688 solid;
+    outline: 5px solid rgb(232, 232, 232);
+}
+
+.second {
+    border-left: 5px #f83191 solid;
+    outline: 5px solid rgb(232, 232, 232);
+}
+
+.third {
+    border-left: 5px #00fbff solid;
+    visibility: hidden;
+}

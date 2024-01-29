@@ -1,0 +1,28 @@
+/* .parent .child .title {
+    color: red;
+}
+
+.parent .title { 
+    color: blue;
+}
+
+.parent p , .title{
+    color: green;
+}
+ */
+
+
+ .t1 , .t2 , .t3 , .t4 {
+    color: floralwhite;
+    background-color: brown;
+    padding: 20px;
+    margin: 10px;
+    width: fit-content;
+ }
+
+ .t4 {
+    max-height: 20px;
+    /* overflow: hidden; */
+ }
+
+ 
