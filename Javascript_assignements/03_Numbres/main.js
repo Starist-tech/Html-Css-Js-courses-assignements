@@ -51,6 +51,7 @@ console.log("%c------fifth------", "color: #32CD32;");
 let num = 10;
 
 console.log(Number.isInteger(num) + Number.isInteger(num)); // you should get => 2 without using any number
+console.log(num.toString().length); // 2
 
 
 /*                         ------sixth------                                 */
