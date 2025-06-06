@@ -7,7 +7,7 @@ console.log("%c------first------", "color: #32CD32;");
 // Examples
 console.log(100_000); // 100000
 console.log(100000); // 100000
-console.log(5e4 + 5e4); // 10000
+console.log(5e4 + 5e4); // 100000-
 
 // Your Solutions
 console.log(10 ** 5); // 100000
